@@ -1,7 +1,14 @@
 @import './variables.scss';
+@import './Footer.scss';
+@import './BudgetBox.scss';
 
 .App {
     text-align: center;
+
+  }
+
+  html{
+    background-color: $primary-color;
   }
   
   .App-logo {

@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+.budgetBox {
+    border: 1px solid $light-color;
+    color: $light-color;
+}
+
+.budget-container {
+    display: flex;
+}
