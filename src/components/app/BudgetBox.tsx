@@ -1,17 +1,18 @@
-import React from "react";
-import TestDataInterface from "./TestDataInterface";
+import React, {useState} from "react";
+import TestDataInterface, { SampleDataArrayProps } from "./TestDataInterface";
 import SampleData from "./SampleData";
+import ComparsionDetails from "./ComparisonDetails";
 
-interface BudgetBoxProps {
-  data?: TestDataInterface;
-}
 
-const BudgetBox = ({ data }: BudgetBoxProps) => {
-  console.log(SampleData);
+const BudgetBox = () => {
+  const [data, setData] = useState(SampleData);
+  
+
+  console.log(data);
   return (
     <div className="budgetBox">
-      {SampleData &&
-        SampleData.map((num, numIndex) => (
+      {data &&
+        data.map((num, numIndex) => (
           <div key={numIndex}>
             <h2>{num.monthName}</h2>
             <div className="budget-overall-box">
@@ -23,6 +24,8 @@ const BudgetBox = ({ data }: BudgetBoxProps) => {
                 Ending Balance ${num.endBalance}
               </div>
             </div>
+            {/* <ComparsionDetails title={"Income2"} object={num} /> */}
+           
             <div className="budget-income-box">
               <h2>Income</h2>
               <section className="estimate-actual-holder">

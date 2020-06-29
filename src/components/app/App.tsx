@@ -3,7 +3,8 @@ import "../styling/App.scss";
 import Footer from './Footer';
 import BudgetBox from './BudgetBox';
 
-function App() {
+
+const App = () =>{
   return (
   <>
   <BudgetBox />
