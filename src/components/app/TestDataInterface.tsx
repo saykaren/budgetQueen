@@ -16,10 +16,15 @@ export interface expenseCategoriesProps {
 }
 
 
+// export interface expenseContributions {
+//     monthExpenses: Array<expenseCategoriesProps>;
+//     monthContributions: Array<monthAmountsProps>
+//     }
 export interface expenseContributions {
-    monthExpenses: Array<expenseCategoriesProps>;
+    monthExpenses: expenseCategoriesProps;
     monthContributions: Array<monthAmountsProps>
     }
+
 
 export interface TestDataProps {
     monthId: number;

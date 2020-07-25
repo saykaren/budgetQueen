@@ -1,6 +1,5 @@
 import React from 'react';
 import {TestDataProps} from './TestDataInterface';
-import expenseContributions from './TestDataInterface';
 
 interface ComparsionDetailsProp {
     title: string;
@@ -11,7 +10,7 @@ const ComparsionDetails = ({title, object}: ComparsionDetailsProp)=>{
     
     return(
         <div className="budget-income-box">
-        <h2>Income</h2>
+        <h2>Income--</h2>
         <section className="estimate-actual-holder">
           {object.budget.map((budgetNum, indexbudget) => (
             <>
