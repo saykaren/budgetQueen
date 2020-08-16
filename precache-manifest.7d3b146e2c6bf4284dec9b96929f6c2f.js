@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dd279a7b6e14e71dd32ffcad77b72e88",
+    "revision": "bb71793fb35509d902b3ac9a0c8baf5f",
     "url": "/budgetQueen/index.html"
   },
   {
-    "revision": "714aae7a9f781feaa866",
-    "url": "/budgetQueen/static/css/main.c8869a72.chunk.css"
+    "revision": "2d3e69afc47f3d177d39",
+    "url": "/budgetQueen/static/css/main.48e0cced.chunk.css"
   },
   {
-    "revision": "db4a7410e346ef734f1d",
-    "url": "/budgetQueen/static/js/2.7b26ee93.chunk.js"
+    "revision": "c38fec59eb7bd646108e",
+    "url": "/budgetQueen/static/js/2.ae60af02.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/budgetQueen/static/js/2.7b26ee93.chunk.js.LICENSE.txt"
+    "url": "/budgetQueen/static/js/2.ae60af02.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "714aae7a9f781feaa866",
-    "url": "/budgetQueen/static/js/main.55f0888a.chunk.js"
+    "revision": "2d3e69afc47f3d177d39",
+    "url": "/budgetQueen/static/js/main.60268d5a.chunk.js"
   },
   {
     "revision": "ae177b4e608b5b6c0bb9",
