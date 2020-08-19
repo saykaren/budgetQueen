@@ -34,13 +34,13 @@ const IncomeDetails = ({ title, object }: IncomeDetailsProp) => {
             </div>
           </>
         ))}
-  
+
         <div className="budget-actual-income">
           <h3>Comparison2</h3>
           {object.actual[0].monthContributions.map(
             (container, indexContainer) => (
               <div className="expenseCategories" key={indexContainer}>
-                <div className='budget-income'>
+                <div className="budget-income">
                   {object.actual[0].monthContributions[indexContainer].title}{" "}
                   {object.actual[0].monthContributions[indexContainer].amount -
                     object.budget[0].monthContributions[indexContainer].amount}
