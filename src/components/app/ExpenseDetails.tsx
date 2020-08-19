@@ -16,33 +16,12 @@ const ExpenseDetails = ({ title, object }: ExpenseDetailsProp) => {
           <>
             <div className="budget-estimate-income" key={indexbudget}>
               <h3>Estimates</h3>
-              <div className="expenseCategories">
-                <h4>Housing Expense</h4>
-
-                {budgetNum.monthExpenses.housingExpense.map((he, heIndex) => (
-                  <div
-                    className="budget-income"
-                    id={`est${heIndex}`}
-                    key={heIndex}
-                  >
-                    {he.title} ${he.amount}
-                  </div>
-                ))}
-              </div>
-              <div className="expenseCategories">
-                <h4>Grocery Expense</h4>
-
-                {budgetNum.monthExpenses.groceryExpense.map((ge, geIndex) => (
-                  <div
-                    className="budget-income"
-                    id={`est${geIndex}`}
-                    key={geIndex}
-                  >
-                    {ge.title} ${ge.amount}
-                  </div>
-                ))}
-              </div>
-              <ExpenseCategoryDetails title="expense2" object={budgetNum.monthExpenses}/>
+              <ExpenseCategoryDetails title="Housing Expense" object={budgetNum.monthExpenses.housingExpense}/>
+              <ExpenseCategoryDetails title="Grocery Expense" object={budgetNum.monthExpenses.groceryExpense}/>
+              <ExpenseCategoryDetails title="Discretionary Funds" object={budgetNum.monthExpenses.discretionaryExpense}/>
+              <ExpenseCategoryDetails title="Retirement Savings" object={budgetNum.monthExpenses.retirementSavings}/>
+              <ExpenseCategoryDetails title="College Savings" object={budgetNum.monthExpenses.collegeSavings}/>
+              <ExpenseCategoryDetails title="Other Expense" object={budgetNum.monthExpenses.otherExpense}/>
             </div>
             
           </>
