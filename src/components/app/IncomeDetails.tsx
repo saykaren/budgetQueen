@@ -34,18 +34,41 @@ const IncomeDetails = ({ title, object }: IncomeDetailsProp) => {
             </div>
           </>
         ))}
-        {object.actual.map((compare, comIndex) => (
-          <>
-            <div className="budget-actual-income">
-              <h3>Comparison</h3>
-              {compare.monthContributions.map((comparison, compIndex) => (
-                <div className="budget-income" key={compIndex}>
-                  Comparison here
+        {/* <div className="budget-actual-income">
+          <h3>Comparison</h3>
+          <div className="budget-income">
+            {object.actual.map((compare, comIndex) => (
+              <>
+                {compare.monthContributions.map((comparison, compIndex) => (
+                  <>{comparison.amount}</>
+                ))}
+              </>
+            ))}
+
+            {object.budget.map((compare, comIndex) => (
+              <>
+                {compare.monthContributions.map((comparison, compIndex) => (
+                  <>{comparison.amount}</>
+                ))}
+              </>
+            ))}
+          </div>
+        </div> */}
+ 
+        <div className="budget-actual-income">
+          <h3>Comparison2</h3>
+          {object.actual[0].monthContributions.map(
+            (container, indexContainer) => (
+              <div className="expenseCategories" key={indexContainer}>
+                <div className='budget-income'>
+                  {object.actual[0].monthContributions[indexContainer].title}{" "}
+                  {object.actual[0].monthContributions[indexContainer].amount -
+                    object.budget[0].monthContributions[indexContainer].amount}
                 </div>
-              ))}
-            </div>
-          </>
-        ))}
+              </div>
+            )
+          )}
+        </div>
       </section>
     </div>
   );

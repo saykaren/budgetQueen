@@ -20,6 +20,7 @@ const ExpenseCategoryDetails = ({
             className="budget-income"
             id={`est${sectionIndex}`}
             key={sectionIndex}
+           
           >
             {section.title} ${section.amount}
           </div>
