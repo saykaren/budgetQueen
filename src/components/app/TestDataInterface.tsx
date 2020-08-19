@@ -15,11 +15,6 @@ export interface expenseCategoriesProps {
     otherExpense: Array<monthAmountsProps>;
 }
 
-
-// export interface expenseContributions {
-//     monthExpenses: Array<expenseCategoriesProps>;
-//     monthContributions: Array<monthAmountsProps>
-//     }
 export interface expenseContributions {
     monthExpenses: expenseCategoriesProps;
     monthContributions: Array<monthAmountsProps>

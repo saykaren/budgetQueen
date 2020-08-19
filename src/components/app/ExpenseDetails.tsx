@@ -16,41 +16,62 @@ const ExpenseDetails = ({ title, object }: ExpenseDetailsProp) => {
           <>
             <div className="budget-estimate-income" key={indexbudget}>
               <h3>Estimates</h3>
-              <ExpenseCategoryDetails title="Housing Expense" object={budgetNum.monthExpenses.housingExpense}/>
-              <ExpenseCategoryDetails title="Grocery Expense" object={budgetNum.monthExpenses.groceryExpense}/>
-              <ExpenseCategoryDetails title="Discretionary Funds" object={budgetNum.monthExpenses.discretionaryExpense}/>
-              <ExpenseCategoryDetails title="Retirement Savings" object={budgetNum.monthExpenses.retirementSavings}/>
-              <ExpenseCategoryDetails title="College Savings" object={budgetNum.monthExpenses.collegeSavings}/>
-              <ExpenseCategoryDetails title="Other Expense" object={budgetNum.monthExpenses.otherExpense}/>
+              <ExpenseCategoryDetails
+                title="Housing Expense"
+                object={budgetNum.monthExpenses.housingExpense}
+              />
+              <ExpenseCategoryDetails
+                title="Grocery Expense"
+                object={budgetNum.monthExpenses.groceryExpense}
+              />
+              <ExpenseCategoryDetails
+                title="Discretionary Funds"
+                object={budgetNum.monthExpenses.discretionaryExpense}
+              />
+              <ExpenseCategoryDetails
+                title="Retirement Savings"
+                object={budgetNum.monthExpenses.retirementSavings}
+              />
+              <ExpenseCategoryDetails
+                title="College Savings"
+                object={budgetNum.monthExpenses.collegeSavings}
+              />
+              <ExpenseCategoryDetails
+                title="Other Expense"
+                object={budgetNum.monthExpenses.otherExpense}
+              />
             </div>
-            
           </>
         ))}
-        {object.actual.map((actualNum, actIndexbudget) => (
+
+        {object.actual.map((actualNum, indexActual) => (
           <>
-            <div className="budget-actual-income" key={actIndexbudget}>
+            <div className="budget-estimate-income" key={indexActual}>
               <h3>Actual</h3>
-              {actualNum.monthContributions.map((ac, acIndex) => (
-                <div
-                  className="budget-income"
-                  id={`act${acIndex}`}
-                  key={acIndex}
-                >
-                  {ac.title} ${ac.amount}
-                </div>
-              ))}
-            </div>
-          </>
-        ))}
-        {object.actual.map((compare, comIndex) => (
-          <>
-            <div className="budget-actual-income">
-              <h3>Comparison</h3>
-              {compare.monthContributions.map((comparison, compIndex) => (
-                <div className="budget-income" key={compIndex}>
-                  Comparison here
-                </div>
-              ))}
+              <ExpenseCategoryDetails
+                title="Housing Expense"
+                object={actualNum.monthExpenses.housingExpense}
+              />
+              <ExpenseCategoryDetails
+                title="Grocery Expense"
+                object={actualNum.monthExpenses.groceryExpense}
+              />
+              <ExpenseCategoryDetails
+                title="Discretionary Funds"
+                object={actualNum.monthExpenses.discretionaryExpense}
+              />
+              <ExpenseCategoryDetails
+                title="Retirement Savings"
+                object={actualNum.monthExpenses.retirementSavings}
+              />
+              <ExpenseCategoryDetails
+                title="College Savings"
+                object={actualNum.monthExpenses.collegeSavings}
+              />
+              <ExpenseCategoryDetails
+                title="Other Expense"
+                object={actualNum.monthExpenses.otherExpense}
+              />
             </div>
           </>
         ))}

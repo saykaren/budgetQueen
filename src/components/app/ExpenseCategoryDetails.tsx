@@ -1,9 +1,8 @@
 import React from "react";
-import { expenseCategoriesProps, monthAmountsProps } from "./TestDataInterface";
+import { monthAmountsProps } from "./TestDataInterface";
 
 interface ExpenseCategoryDetailsProps {
   title: string;
-  // object: expenseCategoriesProps;
   object: Array<monthAmountsProps>;
 }
 
