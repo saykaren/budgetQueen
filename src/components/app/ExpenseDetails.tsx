@@ -75,7 +75,23 @@ const ExpenseDetails = ({ title, object }: ExpenseDetailsProp) => {
             </div>
           </>
         ))}
+        <div className="budget-estimate-income">
+          <h3>Comparison2</h3>
+          {object.actual[0].monthContributions.map(
+            (container, indexContainer) => (
+              <div className="expenseCategories" key={indexContainer}>
+                
+               <div className='budget-income'>
+                  {object.actual[0].monthContributions[indexContainer].title}{" "}
+                  {object.actual[0].monthContributions[indexContainer].amount -
+                    object.budget[0].monthContributions[indexContainer].amount}
+                </div>
+              </div>
+            )
+          )}
+        </div>
       </section>
+      
     </div>
   );
 };

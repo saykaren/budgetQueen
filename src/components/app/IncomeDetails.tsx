@@ -34,27 +34,7 @@ const IncomeDetails = ({ title, object }: IncomeDetailsProp) => {
             </div>
           </>
         ))}
-        {/* <div className="budget-actual-income">
-          <h3>Comparison</h3>
-          <div className="budget-income">
-            {object.actual.map((compare, comIndex) => (
-              <>
-                {compare.monthContributions.map((comparison, compIndex) => (
-                  <>{comparison.amount}</>
-                ))}
-              </>
-            ))}
-
-            {object.budget.map((compare, comIndex) => (
-              <>
-                {compare.monthContributions.map((comparison, compIndex) => (
-                  <>{comparison.amount}</>
-                ))}
-              </>
-            ))}
-          </div>
-        </div> */}
- 
+  
         <div className="budget-actual-income">
           <h3>Comparison2</h3>
           {object.actual[0].monthContributions.map(
