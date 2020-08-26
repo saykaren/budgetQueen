@@ -17,16 +17,9 @@ const ExpenseComparison = ({title, objectActual, objectBudget}: ExpenseCompariso
                 <>
                   <div className="budget-income">
                     {
-                      objectActual[
-                        indexContainer
-                      ].title
+                      objectActual[indexContainer].title
                     }{" "}
-                    {objectActual[
-                      indexContainer
-                    ].amount -
-                    objectBudget[
-                        indexContainer
-                      ].amount}
+                    {objectBudget[indexContainer].amount-objectActual[indexContainer].amount}
                   </div>
                 </>
               )

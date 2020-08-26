@@ -36,8 +36,8 @@ export const TestData = [
           housingExpense: [{ title: "Rent", amount: 1800, monthIN: 1 }],
 
           groceryExpense: [
-            { title: "King Soopers", amount: 500, monthIN: 1 },
-            { title: "Costco", amount: 400, monthIN: 1 },
+            { title: "King Soopers", amount: 510, monthIN: 1 },
+            { title: "Costco", amount: 382, monthIN: 1 },
           ],
 
           discretionaryExpense: [{ title: "Amazon", amount: 200, monthIN: 1 }],
