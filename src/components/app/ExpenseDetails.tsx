@@ -1,6 +1,7 @@
 import React from "react";
 import { TestDataProps } from "./TestDataInterface";
 import ExpenseCategoryDetails from "./ExpenseCategoryDetails";
+import ExpenseComparison from "./ExpenseComparison";
 
 interface ExpenseDetailsProp {
   title: string;
@@ -77,21 +78,38 @@ const ExpenseDetails = ({ title, object }: ExpenseDetailsProp) => {
         ))}
         <div className="budget-estimate-income">
           <h3>Comparison2</h3>
-          {object.actual[0].monthContributions.map(
-            (container, indexContainer) => (
-              <div className="expenseCategories" key={indexContainer}>
-                
-               <div className='budget-income'>
-                  {object.actual[0].monthContributions[indexContainer].title}{" "}
-                  {object.actual[0].monthContributions[indexContainer].amount -
-                    object.budget[0].monthContributions[indexContainer].amount}
-                </div>
-              </div>
-            )
-          )}
+          <ExpenseComparison
+            title="Housing Expense"
+            objectActual={object.actual[0].monthExpenses.housingExpense}
+            objectBudget={object.budget[0].monthExpenses.housingExpense}
+          />
+          <ExpenseComparison
+            title="Grocery Expense"
+            objectActual={object.actual[0].monthExpenses.groceryExpense}
+            objectBudget={object.budget[0].monthExpenses.groceryExpense}
+          />
+          <ExpenseComparison
+            title="Discretionary"
+            objectActual={object.actual[0].monthExpenses.discretionaryExpense}
+            objectBudget={object.budget[0].monthExpenses.discretionaryExpense}
+          />
+          <ExpenseComparison
+            title="Retirment Savings"
+            objectActual={object.actual[0].monthExpenses.retirementSavings}
+            objectBudget={object.budget[0].monthExpenses.retirementSavings}
+          />
+          <ExpenseComparison
+            title="College Savings"
+            objectActual={object.actual[0].monthExpenses.collegeSavings}
+            objectBudget={object.budget[0].monthExpenses.collegeSavings}
+          />
+          <ExpenseComparison
+            title="Other Expense"
+            objectActual={object.actual[0].monthExpenses.otherExpense}
+            objectBudget={object.budget[0].monthExpenses.otherExpense}
+          />
         </div>
       </section>
-      
     </div>
   );
 };
