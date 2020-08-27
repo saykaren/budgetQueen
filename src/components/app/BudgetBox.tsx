@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import TestDataInterface, { SampleDataArrayProps } from "./TestDataInterface";
 import SampleData from "./SampleData";
 import ComparsionDetails from "./ComparisonDetails";
-import TestSend from "./TestSend";
 
 const BudgetBox = () => {
   const [data, setData] = useState(SampleData);
@@ -10,7 +9,6 @@ const BudgetBox = () => {
   console.log(data);
   return (
     <div className="budgetBox">
-      <TestSend title={"Hello"} object={data[0]} />
       {data &&
         data.map((num, numIndex) => (
           <div key={numIndex}>
