@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/budgetQueen/static/css/main.48e0cced.chunk.css",
-    "main.js": "/budgetQueen/static/js/main.60268d5a.chunk.js",
-    "main.js.map": "/budgetQueen/static/js/main.60268d5a.chunk.js.map",
+    "main.css": "/budgetQueen/static/css/main.6b78c7d0.chunk.css",
+    "main.js": "/budgetQueen/static/js/main.d5a3901c.chunk.js",
+    "main.js.map": "/budgetQueen/static/js/main.d5a3901c.chunk.js.map",
     "runtime-main.js": "/budgetQueen/static/js/runtime-main.cf86654c.js",
     "runtime-main.js.map": "/budgetQueen/static/js/runtime-main.cf86654c.js.map",
     "static/js/2.ae60af02.chunk.js": "/budgetQueen/static/js/2.ae60af02.chunk.js",
     "static/js/2.ae60af02.chunk.js.map": "/budgetQueen/static/js/2.ae60af02.chunk.js.map",
     "index.html": "/budgetQueen/index.html",
-    "precache-manifest.7d3b146e2c6bf4284dec9b96929f6c2f.js": "/budgetQueen/precache-manifest.7d3b146e2c6bf4284dec9b96929f6c2f.js",
+    "precache-manifest.e487176c8c34070758e41472830f9586.js": "/budgetQueen/precache-manifest.e487176c8c34070758e41472830f9586.js",
     "service-worker.js": "/budgetQueen/service-worker.js",
-    "static/css/main.48e0cced.chunk.css.map": "/budgetQueen/static/css/main.48e0cced.chunk.css.map",
+    "static/css/main.6b78c7d0.chunk.css.map": "/budgetQueen/static/css/main.6b78c7d0.chunk.css.map",
     "static/js/2.ae60af02.chunk.js.LICENSE.txt": "/budgetQueen/static/js/2.ae60af02.chunk.js.LICENSE.txt",
-    "static/media/sayKaren_Logo_transparent_7.2019.png": "/budgetQueen/static/media/sayKaren_Logo_transparent_7.2019.4ee98378.png"
+    "static/media/sayKaren_Logo_white.png": "/budgetQueen/static/media/sayKaren_Logo_white.d0827d01.png"
   },
   "entrypoints": [
     "static/js/runtime-main.cf86654c.js",
     "static/js/2.ae60af02.chunk.js",
-    "static/css/main.48e0cced.chunk.css",
-    "static/js/main.60268d5a.chunk.js"
+    "static/css/main.6b78c7d0.chunk.css",
+    "static/js/main.d5a3901c.chunk.js"
   ]
 }

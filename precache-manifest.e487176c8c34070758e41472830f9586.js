@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bb71793fb35509d902b3ac9a0c8baf5f",
+    "revision": "13da5af0fd8215033f9759b1d8700385",
     "url": "/budgetQueen/index.html"
   },
   {
-    "revision": "2d3e69afc47f3d177d39",
-    "url": "/budgetQueen/static/css/main.48e0cced.chunk.css"
+    "revision": "cef1bb618c456a9912c5",
+    "url": "/budgetQueen/static/css/main.6b78c7d0.chunk.css"
   },
   {
     "revision": "c38fec59eb7bd646108e",
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/budgetQueen/static/js/2.ae60af02.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2d3e69afc47f3d177d39",
-    "url": "/budgetQueen/static/js/main.60268d5a.chunk.js"
+    "revision": "cef1bb618c456a9912c5",
+    "url": "/budgetQueen/static/js/main.d5a3901c.chunk.js"
   },
   {
     "revision": "ae177b4e608b5b6c0bb9",
     "url": "/budgetQueen/static/js/runtime-main.cf86654c.js"
   },
   {
-    "revision": "4ee98378ff2cd65d37dc47e7b6cd0023",
-    "url": "/budgetQueen/static/media/sayKaren_Logo_transparent_7.2019.4ee98378.png"
+    "revision": "d0827d01ac17b128172a9f867b8d0c82",
+    "url": "/budgetQueen/static/media/sayKaren_Logo_white.d0827d01.png"
   }
 ]);
