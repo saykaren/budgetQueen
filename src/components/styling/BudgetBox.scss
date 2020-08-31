@@ -64,3 +64,9 @@ h2 {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
+.monthDetail{
+  border-bottom: double $dark-color;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}

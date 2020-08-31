@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+.inputSection{
+    font-size: 5em;
+    z-index: 1;
+    color: $secondary_color;
+    background-color: pink;
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    opacity: 0.8;
+}
