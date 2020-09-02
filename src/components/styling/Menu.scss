@@ -1,12 +1,26 @@
 @import './variables.scss';
 
 .inputSection{
-    font-size: 5em;
+    font-size: 1em;
     z-index: 1;
     color: $secondary_color;
-    background-color: pink;
+    background-color: $primary_color;
     position: fixed;
     width: 50vw;
     height: 100vh;
     opacity: 0.8;
+    padding: 5px;
+    margin: -20px;
+
 }
+
+.inputLabel {
+    margin-left: 5px;
+}
+
+.inputBox {
+    padding: 5px;
+    margin: 7px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+  }

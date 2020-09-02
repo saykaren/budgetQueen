@@ -1,5 +1,11 @@
 @import "./variables.scss";
 
+.appTitle {
+  font-size: 36px;
+  text-shadow: 1px 1px 2px black, 0px 0px 25px $light-color;
+}
+
+
 h2 {
   flex: 1;
   text-align: center;
@@ -10,6 +16,14 @@ h2 {
   padding: 10px;
   margin: 10px;
   background-color: $secondary-color;
+}
+
+.openTab {
+  font-size: 5em;
+  z-index: 1;
+  color: $primary-color;
+  position: fixed;
+  text-shadow: 1px 1px 2px black, 0px 0px 25px $light-color, 0px 0px 5px $light-color;
 }
 
 .budget-detail{
@@ -69,4 +83,9 @@ h2 {
   border-bottom: double $dark-color;
   padding-bottom: 30px;
   margin-bottom: 30px;
+}
+
+.menuOpen {
+  text-shadow: 1px 1px 2px black, 0px 0px 25px $light-color, 0px 0px 5px $light-color;
+  text-align: end;
 }
