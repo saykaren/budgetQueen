@@ -26,6 +26,15 @@ h2 {
   text-shadow: 1px 1px 2px black, 0px 0px 25px $light-color, 0px 0px 5px $light-color;
 }
 
+#refresh {
+  font-size: 1em;
+  z-index: 1;
+  color: $primary-color;
+  position: fixed;
+  text-shadow: 1px 1px 2px black, 0px 0px 25px $light-color, 0px 0px 5px $light-color;
+  margin-left: 88%;
+}
+
 .budget-detail{
      border: 1px solid $light-color;
   color: $dark-color;

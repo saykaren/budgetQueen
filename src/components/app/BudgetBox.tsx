@@ -4,10 +4,35 @@ import SampleData from "./SampleData";
 import ComparsionDetails from "./ComparisonDetails";
 import Menu from "./Menu";
 
+
 const BudgetBox = () => {
   const [data, setData] = useState(SampleData);
   const [menu, setMenu] = useState(false);
   const [BeginBalanceState, setBeginBalanceState] = useState(4000);
+
+  const calculate = ()=>{
+    let adjustData = data;
+    
+    let totalExpenses = 0;
+    let totalIncomeArray = [];
+    ///typescript error below -- maybe put in another component? 
+  //  console.log({adjustData});
+  //   totalIncome = adjustData[0].actual[0].monthContributions.reduce((income, num)=>(
+  //   income.amount + num.amount, 0));
+    // adjustData[0].actual[0].monthContributions.map((income, num)=>(
+    // totalIncome + income.amount + 1));
+
+    const totalIncomeFunction = ()=>{
+      adjustData[0].actual[0].monthContributions.map((income)=>(
+        // totalIncome + income.amount
+        // console.log(income.amount)
+        totalIncomeArray.push(income.amount)
+        ))
+    }
+    totalIncomeFunction();
+      // console.log({totalIncomeArray});
+    };
+
 
   console.log(data);
   return (
@@ -26,6 +51,7 @@ const BudgetBox = () => {
           &raquo;
         </div>
       )}
+      <div onClick={()=>calculate()} id='refresh'>Refresh</div>
       <h2 className="appTitle">Budget Queen</h2>
       {data &&
         data.map((num, numIndex) => (
