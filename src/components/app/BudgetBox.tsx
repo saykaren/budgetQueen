@@ -3,35 +3,63 @@ import TestDataInterface, { SampleDataArrayProps } from "./TestDataInterface";
 import SampleData from "./SampleData";
 import ComparsionDetails from "./ComparisonDetails";
 import Menu from "./Menu";
-
+import Calculate from './Calculate';
 
 const BudgetBox = () => {
   const [data, setData] = useState(SampleData);
   const [menu, setMenu] = useState(false);
   const [BeginBalanceState, setBeginBalanceState] = useState(4000);
 
-  const calculate = ()=>{
+  const calculate = () => {
     let adjustData = data;
-    
-    let totalExpenses = 0;
-    let totalIncomeArray = [];
-    ///typescript error below -- maybe put in another component? 
-  //  console.log({adjustData});
-  //   totalIncome = adjustData[0].actual[0].monthContributions.reduce((income, num)=>(
-  //   income.amount + num.amount, 0));
-    // adjustData[0].actual[0].monthContributions.map((income, num)=>(
-    // totalIncome + income.amount + 1));
 
-    const totalIncomeFunction = ()=>{
-      adjustData[0].actual[0].monthContributions.map((income)=>(
-        // totalIncome + income.amount
-        // console.log(income.amount)
+    let totalExpensesArray : number[] = [];
+    let sumExpenses : number = 0;
+
+    let totalIncomeArray: number[] = [];
+    let sumIncome : number = 0;
+  
+    const totalIncomeFunction = () => {
+      adjustData[0].actual[0].monthContributions.map((income) =>
         totalIncomeArray.push(income.amount)
-        ))
-    }
-    totalIncomeFunction();
-      // console.log({totalIncomeArray});
+      );
+ 
     };
+    totalIncomeFunction();
+  
+
+    const totalExpenseFunction = () => {
+      adjustData[0].actual[0].monthExpenses.housingExpense.map((expense) =>
+      totalExpensesArray.push(expense.amount)
+      );
+      adjustData[0].actual[0].monthExpenses.groceryExpense.map((expense) =>
+      totalExpensesArray.push(expense.amount)
+      );
+      adjustData[0].actual[0].monthExpenses.discretionaryExpense.map((expense) =>
+      totalExpensesArray.push(expense.amount)
+      );
+      adjustData[0].actual[0].monthExpenses.retirementSavings.map((expense) =>
+      totalExpensesArray.push(expense.amount)
+      );
+      adjustData[0].actual[0].monthExpenses.collegeSavings.map((expense) =>
+      totalExpensesArray.push(expense.amount)
+      );
+      adjustData[0].actual[0].monthExpenses.otherExpense.map((expense) =>
+      totalExpensesArray.push(expense.amount)
+      );
+  
+    };
+    totalExpenseFunction();
+   
+
+    sumExpenses = totalExpensesArray.reduce((acc,num)=> acc+ num, 0)
+    sumIncome = totalIncomeArray.reduce((acc,num)=> acc+ num, 0)
+ 
+
+    let monthNetAmount = sumIncome - sumExpenses;
+    console.table({monthNetAmount, sumExpenses, sumIncome, totalIncomeArray, totalExpensesArray})
+  };
+
 
 
   console.log(data);
@@ -51,7 +79,9 @@ const BudgetBox = () => {
           &raquo;
         </div>
       )}
-      <div onClick={()=>calculate()} id='refresh'>Refresh</div>
+      <div onClick={() => calculate()} id="refresh">
+        Refresh
+      </div>
       <h2 className="appTitle">Budget Queen</h2>
       {data &&
         data.map((num, numIndex) => (
